@@ -1,0 +1,478 @@
+/* importar google fonts: "https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* proriedades genericas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/***** Próxima secção: Banner *****/
+/* propriedades do banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* propriedades das imagens dentro do banner */
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .25;
+}
+
+/* propriedades do CONTENT "relativamente" ao banner */
+.banner .content {
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+
+/* prop */
+.banner .content h2 {
+    color: #fff;
+    font-size: 60px;
+}
+
+/* prop */
+.banner .content p{
+    color: #fff;
+    font-size: 18px;
+
+}
+
+/* prop da menu-var */
+.banner header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+/* prop da logo "BRAND NAME" */
+.banner header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* prop do menu Hamburguer */
+.banner header .toggle {
+    position: relative;
+    width: 36px;
+    height: 28px;
+    background: url(../imagens/toggle.png);
+    background-size: cover; /* replica os riscos/imagem & ajusta às dimensões */
+    cursor: pointer;
+}
+
+/***** Próxima secção: About *****/
+
+.about {
+    position: relative;
+    width: 100%;
+    display: flex; /* vai me permitir meter o About Us à esquerda e a Janela à direita */
+}
+
+/* Ocupa em metade do width com o contentBx */
+.about .contentBx {
+    background: #162c3b;
+    padding: 100px;
+    width: 50%;
+}
+
+/* prop na class heading */
+.heading {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* prop na class text */
+.text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+
+}
+
+/* 50% da esquerda - janela branca & vermelha */
+.about .imgBx {
+    background: url(../imagens/window.jpg);
+    width: 50%;     /* para compensar a outra 50% do "contentBx" */
+    background-size: cover;
+    background-position: center;
+}
+
+/***** Próxima secção: Services *****/
+/* background na secção services */
+.services {
+    background: #12222d; 
+    padding: 100px;
+    text-align: center;
+}
+
+/* imagens e etc com props responsive */
+.services .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+/* background branco de cada figura & props  */
+.services .container .serviceBx {
+    position: relative;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* diminuir as imagens das 3 figuras */
+.services .container .serviceBx img {
+    max-width: 100px;
+}
+
+/* props nas legendas da imgem */
+.services .container .serviceBx h2 {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/***** Próxima secção: Techonology *****/
+/***************** SUPER IMPORTANTE - Dica de PADDING vs MARGIN ************************/
+.technology{
+    background: #3f8ffc;
+    width: 100%;
+    padding: 100px;
+    padding-top: 300px; /* aumenta a distancia do top até à secção em termos de padding */
+    margin-top: -300px; /* diminui a margem, fazendo com que a secção anterior venha "por cima // à frente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* delinear o max espaço desta secção */
+.technology .contentBx {
+    max-width: 800px;
+}
+
+/*max da largura da imagem */
+.technology .imgBx {
+    max-width: 250px;
+}
+
+/* ocupara 100% da largura da imagem */
+.technology .imgBx img {
+    max-width: 100%;
+}
+
+
+/***** Próxima secção: Client *****/
+
+/* Adicionar background nesta secção */
+.client {
+    background: #162c3b;
+    padding: 100px;
+    text-align: center;
+}
+
+/* props no grupo das imagens */
+.client .imgBx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* props nas imagens & opacity */
+.client .imgBx img{
+    max-width: 200px;
+    margin: 20px;
+    opacity: .25;
+    cursor: pointer;
+}
+
+.client .imgBx img:hover {
+    opacity: 1;
+}
+
+/***** Próxima secção: Testimonials *****/
+
+/* props nesta secçã0 & background */
+.testimonials {
+    position: relative;
+    padding: 100px;
+    background: #12222d;
+    text-align: center;
+}
+
+/* flex no container */
+.testimonials .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+/* props dentro da contentBx & background */
+.testimonials .container .contentBx {
+    background: #fff;
+    padding: 60px 50px;
+    width: 550px;
+    display: flex;
+    justify-content: center; /* alinhamento esquerda => centro <= direita */     /*** Start vs End ***/
+    align-items: center;     /* alinhamento top => centro <= bot */              /*** Start vs End ***/
+    text-align: center;     /* alinhamento esquerda => centro <= direita */      /*** Start vs End ***/
+}
+
+/* props no p*/
+.testimonials .container .contentBx p {
+    font-style: italic;
+}
+
+/* props no h3 */
+.testimonials .container .contentBx h3 {
+    width: 100%;
+    text-align: end;
+    font-weight: 500;
+    color: #3f8ffc;
+}
+
+/***** Próxima secção: Contact *****/
+/* partilhar a mesma cor do background */
+.contact {
+    padding: 100px;
+    background: #162c3b;
+    text-align: center;
+}
+
+/* props na imagem do gelado */
+.imgBx2 {
+    background: url(../imagens/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+/* sobrepor o segundo background com !important na imagem da esquerda */
+.redbg {
+    background: url(../imagens/red.jpg) !important; /* sobrepor o segundo background */
+    background-size: cover;
+    background-position: center;
+}
+
+/* props */
+.form .inputbx{
+    margin-bottom: 40px;
+}
+
+/* props nos inputs */
+.form .inputbx input{
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* cor do placeholder */
+.form .inputbx input::placeholder {
+    color: #fff;
+}
+
+/* props na textarea */
+.form .inputbx textarea{
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    min-height: 150px;
+    border-bottom: 2px solid #fff;  /* linha para escrever / limites */
+}
+
+/* placeholder */
+.form .inputbx textarea::placeholder {
+    color: #fff;
+}
+
+/* props no botao submit */
+.form .inputbx input[type="submit"] {
+    width: 150px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/***** Próxima secção: Footer *****/
+
+/* flex na secção: footer */
+.footer {
+    background: #162c3b;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* flex no ul */
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* remover os pontos */
+.footer ul li {
+    list-style: none;
+}
+
+/* props nos links */
+.footer ul li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* inverter as cores e limites às imagens */
+.footer ul li a img {
+    filter: invert(1); /* The invert() CSS function inverts the color samples in the input image */ /* Neste caso invert o escuro para branco */
+    max-width: 20px;
+}
+
+/***** MEDIA QUEIRES *****/
+
+
+@media (max-width: 991px) {
+
+    .banner {
+        padding: 50px;
+    }
+    .banner header {
+        padding: 20px 50px;
+    }
+
+    .banner .content h2 {
+        font-size: 36px;
+    }
+
+    .banner .content p {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentBx,
+    .about .imgBx {
+        width: 100%;      /* vai ocupar todo o espaço e tirar a imagem do gelado */
+        padding: 50px;
+        min-height: 400px;
+        text-align: center;
+    }
+
+    .services {
+        padding: 50px;
+    }
+
+    .services .container {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .services .container .serviceBx {
+        margin: 20px;
+        width: 300px;
+        height: 350px;
+    }
+
+    .technology {
+        padding: 50px;
+        padding-top: 300px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .technology .imgBx {
+        margin-top: 40px;
+        max-width: 250px;
+    }
+
+    .client {
+        padding: 50px;
+    }
+
+    .client .imgBx {
+        justify-content: center;
+    }
+
+    .testimonials {
+        padding: 50px;
+    }
+
+    .testimonials .contentBx {
+        padding: 60px 40px;
+        max-width: 550px;
+        margin-bottom: 40px;
+    }
+
+    .testimonials .contentBx:last-child {
+        margin-bottom: 0px;
+    }
+
+    .contact {
+        padding: 50px;
+    }
+
+    .footer {
+        padding: 20px 50px;
+        flex-direction: column-reverse; /* dá-me a coluna a começar do fim para o inicio */
+        text-align: center;
+    }
+
+    .footer ul{
+        margin-bottom: 20px;
+    }
+}
